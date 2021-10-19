@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
+import { TodoContext } from "../TodoContext";
 import "./TodoSearch.css";
 
-function TodoSearch({ searchValue, setSearchValue }) {
+function TodoSearch() {
+  const { searchValue, setSearchValue } = useContext(TodoContext);
+
   const onSearchValueChange = (event) => {
     // Cada vez que se realice una búsqueda por el usuario, se llamará a función onSearchValiueChange la que ejecutará la función setSearchValue para actualizar el searchValue (el estado)
-    console.log(event.target.value);
     setSearchValue(event.target.value);
   };
 
