@@ -25,7 +25,7 @@ function AppUI() {
       <TodoCounter />
       <TodoSearch />
       <TodoList>
-        {error && <p>Desespérate, hubo un error...</p>}
+        {error && <p>Desespérate, hubo un error... Recarga la App</p>}
         {loading && <ThreeDots />}
         {!loading && !searchedTodos.length && <p>¡Crea tu primer TODO!</p>}
 
